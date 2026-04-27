@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Porter Libby</title>
+        <style>
+            *{
+                color: rgb(236, 226, 193);
+                font-family: monospace;
+            }
+            body{
+                text-align: center;
+                width: 100%;
+                position:absolute;
+                margin: 0 auto;
+                min-height: 100%;
+            }
+            #content{
+                position:relative;
+                width: 800px;
+                z-index: 2;
+                max-width: 80%;
+                display: inline-block;
+                text-align: left;
+            }
+            .bar{
+                border-bottom: 1px solid rgb(236, 226, 193);
+                margin: 10px 0px;
+                width: 100%;
+            }
+            .resume-item{
+                border: 1px solid rgba(236, 226, 193,0.5);
+                padding: 10px;
+                padding-bottom: 15px;
+                margin: 10px;
+            }
+            .resume-title{
+                text-decoration: underline;
+            }
+            .resume-date{
+
+            }
+            .resume-desc{
+
+            }
+            .resume-tag{
+                border: 1px solid rgb(236, 226, 193);
+                padding: 2px;
+                margin: 2px;
+                margin-bottom: 4px;
+            }
+            .blink{
+                animation: blink 1s step-end infinite;
+            }
+            @keyframes blink {
+                0%, 100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+            #term_text2{
+                font-size: 15px;
+            }
+            #bg{
+                
+                background-color: #111;
+                font-size: 2vw;
+                position:absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                overflow-y:hidden;
+                text-wrap: wrap;
+                overflow-wrap: break-word;
+                cursor:default;
+                user-select: none;
+            }
+            #bg span{
+                color: rgba(236, 226, 193,0.0);
+                display: inline-block; 
+                padding: 0 1px; 
+                transition: color 1s ease;
+                cursor:unset
+            }
+            #bg span:hover{
+                color: rgba(236, 226, 193,0.1);
+                transition: color 0.01s ease;
+            }
+            #nav{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bg">01001100011011110111001001100101011011010010000001101001011100000111001101110101011011010010000001100100011011110110110001101111011100100010000001110011011010010111010000100000011000010110110101100101011101000010110000100000011000110110111101101110011100110110010101100011011101000110010101110100011101010111001000100000011000010110010001101001011100000110100101110011011000110110100101101110011001110010000001100101011011000110100101110100001011000010000001110011011001010110010000100000011001000110111100100000011001010110100101110101011100110110110101101111011001000010000001110100011001010110110101110000011011110111001000100000011010010110111001100011011010010110010001101001011001000111010101101110011101000010000001110101011101000010000001101100011000010110001001101111011100100110010100100000011001010111010000100000011001000110111101101100011011110111001001100101001000000110110101100001011001110110111001100001001000000110000101101100011010010111000101110101011000010010111000100000010101010111010000100000011001010110111001101001011011010010000001100001011001000010000001101101011010010110111001101001011011010010000001110110011001010110111001101001011000010110110100101100001000000111000101110101011010010111001100100000011011100110111101110011011101000111001001110101011001000010000001100101011110000110010101110010011000110110100101110100011000010111010001101001011011110110111000100000011101010110110001101100011000010110110101100011011011110010000001101100011000010110001001101111011100100110100101110011001000000110111001101001011100110110100100100000011101010111010000100000011000010110110001101001011100010111010101101001011100000010000001100101011110000010000001100101011000010010000001100011011011110110110101101101011011110110010001101111001000000110001101101111011011100111001101100101011100010111010101100001011101000010111000100000010001000111010101101001011100110010000001100001011101010111010001100101001000000110100101110010011101010111001001100101001000000110010001101111011011000110111101110010001000000110100101101110001000000111001001100101011100000111001001100101011010000110010101101110011001000110010101110010011010010111010000100000011010010110111000100000011101100110111101101100011101010111000001110100011000010111010001100101001000000111011001100101011011000110100101110100001000000110010101110011011100110110010100100000011000110110100101101100011011000111010101101101001000000110010001101111011011000110111101110010011001010010000001100101011101010010000001100110011101010110011101101001011000010111010000100000011011100111010101101100011011000110000100100000011100000110000101110010011010010110000101110100011101010111001000101110001000000100010101111000011000110110010101110000011101000110010101110101011100100010000001110011011010010110111001110100001000000110111101100011011000110110000101100101011000110110000101110100001000000110001101110101011100000110100101100100011000010111010001100001011101000010000001101110011011110110111000100000011100000111001001101111011010010110010001100101011011100111010000101100001000000111001101110101011011100111010000100000011010010110111000100000011000110111010101101100011100000110000100100000011100010111010101101001001000000110111101100110011001100110100101100011011010010110000100100000011001000110010101110011011001010111001001110101011011100111010000100000011011010110111101101100011011000110100101110100001000000110000101101110011010010110110100100000011010010110010000100000011001010111001101110100001000000110110001100001011000100110111101110010011101010110110100101110
+        </div>
+        <div id="content">
+            <h1>$ <span id='term_text'></span><span id='term_text2'></span><span class='blink'>_</span></h1>
+            <br>
+            <div id="nav">
+                <a href="#">Github</a> | <a href="#">Gitlab</a> | <a href="#">LinkedIn</a> | <a href="#">Resume</a>
+            </div>
+            <br>
+            <div class="bar">Work History</div>
+            <div class="resume-item">
+                <span class="resume-title">Computational System Manager</span>
+                <br>
+                <span class="resume-date">November 2021 - Preset</span>
+                <br>
+                <span class="resume-desc">
+                    <ul>
+                        <li>Oversaw the setup and maintenance of several small (6-8 node) HPC compute clusters.</li>
+                        <li>Overhauled large sections of computation infrastructure including physical layout, Slurm HPC scheduling, backfill, SaaS, VM Systems, Docker containers and more.</li>
+                        <li>Worked/consulted with professionals in Computer Science, Biology, Chemistry, Math, and Engineering to plan and execute computational research.</li>
+                        <li>Helped to develop and maintain computational services for classes and labs in Computer Science, Math, and Biology.</li>
+                        <li>Developed internal websites and tools for the department, division, and institution.</li>
+                        <li>Taught and co-taught classes in CS including Computing Skills, Cybersecurity, and System Administration</li>
+                    </ul>
+                </span>
+                <br><br>
+                <span class="resume-tag">Debian</span><span class="resume-tag">Ubuntu</span><span class="resume-tag">RHEL</span>
+                <span class="resume-tag">Slurm</span><span class="resume-tag">Docker</span><span class="resume-tag">Nagios</span><span class="resume-tag">Jupyter</span><span class="resume-tag">Bash</span><span class="resume-tag">Python</span><span class="resume-tag">Apache</span><span class="resume-tag">Nginx</span>
+            </div>
+            <br>
+            <div class="bar">Research Efforts</div>
+            <div class="bar">Publications and Certs</div>
+        </div>
+    </body>
+    <script>
+        async function typewriteText(text,elem){
+            for (let i = 0; i < text.length; i++) {
+                await sleep(30)
+                elem.innerHTML += text[i];
+            }
+
+        }
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function onPageLoad(){
+            await sleep(500);
+            await typewriteText("Porter Libby", document.getElementById('term_text'));
+            await sleep(500);
+            document.getElementById('term_text').innerHTML += "</br>$ ";
+            await sleep(100);
+            await typewriteText("Building and maintaining HPC systems.", document.getElementById('term_text2'));
+        }
+        const textElement = document.querySelector('#bg');
+        textElement.innerHTML = textElement.textContent
+        .split('')
+        .map(char => `<span>${char}</span>`)
+        .join('');
+
+        onPageLoad()
+        
+    </script>
+</html>
